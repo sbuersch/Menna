@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>inspirational </title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    /* Custom styles for the message box */
+    .message-box {
+        background-color: #f8d7da;
+        border-color: #f5c6cb;
+        color: #721c24;
+        padding: 15px;
+        border-radius: 0.25rem;
+        margin-top: 20px;
+    }
+
+     body {
+        margin: 0;
+        padding: 0;
+        background-image: url('https://i0.wp.com/beato.com.sg/wp-content/uploads/2022/06/Can-I-buy-flowers-the-day-before-scaled-1326x700.jpg'); /* Replace 'your-image-url.jpg' with the URL of your image */
+        background-size: cover; /* Cover the entire background */
+        background-position: center; /* Center the background image */
+        font-family: Arial, sans-serif; /* Set the font family */
+        color: #ffffff; /* Set text color */
+    }
+</style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="text-center">
+        <h1>Inspirational Quotes</h1>
+        <button id="generateButton" class="btn btn-primary mt-3">Stefan?</button>
+        <div id="messageDisplay" class="message-box mt-3"></div>
+    </div>
+</div>
+
+<!-- Bootstrap JS (optional) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+// Example messages
+const messages = [
+    "Des loss i ma ned nehma!",
+    "I mog net",
+    "Griaß eich :)",
+    "Mogst an Ayran?",
+    "Der Trick is si afoch guad einzucremen",
+    "Na",
+    "Der Käse schmeckt extrem scheiße - mogst du eam vll hobn?",
+    "I kauf ganz sicher kane 5K Gold &#x1F62C;",
+    "Hättest a was zum essen wollen? &#x1F62C;",
+    "Prinzessin Laberkopf &#x1FAC5;",
+    "*RandomErklärungMitHandbewegungen* &#x1F90C;",
+    "Sicher Ned!",
+    "Des findst wieder witzig, dass a Mann da selbst bügelt hm...passt ned in dei Weltbild oder",
+    "Kum her... &#x1F970;",
+    "Kleine Nonna &#x1F970;",
+    "Babyyyy <3",
+    "Internes TODO für Stefan: checken welche Fußballverein Mennas Verwandte mögen für die Hochzeit",
+    "Du schaust heute hübsch aus Baby!! &#x1F485;",
+    "Der kleine Ramses &#x1F476;",
+];
+
+// Function to generate and display a random message
+function generateRandomMessage() {
+    // Generate a random index
+    const randomIndex = Math.floor(Math.random() * messages.length);
+    // Get the message at the random index
+    const randomMessage = messages[randomIndex];
+    // Display the message
+    $('#messageDisplay').html(`<div class="message-box">${randomMessage}</div>`);
+}
+
+// Attach click event listener to the button
+$('#generateButton').click(generateRandomMessage);
+
+// Initial message display
+generateRandomMessage();
+</script>
+
+</body>
+</html>
